@@ -107,10 +107,10 @@ const content = () => {
       return (
         <div className="gif-card" key={g.id}>
           <details className="deets">
-            <p>
+            <summary>
               Show
-            </p>
-        <h4>{g.title !== undefined ? (g.title.charAt(0).toUpperCase() + g.title.slice(1)) : ''}</h4>
+            </summary>
+        <h5>{g.title !== undefined ? (g.title.charAt(0).toUpperCase() + g.title.slice(1)) : ''}</h5>
         <button className="gif-download" onClick={() => handleDownload(g.images.fixed_height.url)}>
           <img className="svg" src={Download} alt="download" ></img>
         </button>
