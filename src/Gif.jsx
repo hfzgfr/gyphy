@@ -93,7 +93,8 @@ const content = () => {
   switch(true) {
     // IF LOADER IS TRUE, SHOW LOADING SPINNER
     case loader:
-      return <div>
+      return (
+      <>
     <Container className="col text-center" fluid="md">
     {/* <h1>Loading...</h1> */}
       <Spinner animation="border" variant="primary" />
@@ -101,7 +102,7 @@ const content = () => {
       <Spinner animation="border" variant="success" />
       <Spinner animation="border" variant="danger" />
     </Container>
-      </div>
+    </>)
     // IF DATA ARRAY IS LOADED, LOOP THROUGH
     case data.length > 0:
     return data.map(g => {
