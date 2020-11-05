@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
+// import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { Button, Container, Spinner } from 'react-bootstrap';
 import Download from './Images/Download.svg';
 // import Home from './Images/Home.svg';
