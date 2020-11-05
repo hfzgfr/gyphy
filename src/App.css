@@ -83,7 +83,7 @@ header {
 }
 
 a {
-  padding-bottom: 14px;
+  padding-top: 5px;
 }
 
 
@@ -135,6 +135,9 @@ img.svg {
   width: 40px;
 }
 
+img.svg-icon {
+  width: 4%;
+}
 .pagination {
   padding: 20px;
 }

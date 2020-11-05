@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { Button, Container, Spinner } from 'react-bootstrap';
 import Download from './Images/Download.svg';
-import Home from './Images/Home.svg';
+// import Home from './Images/Home.svg';
 // import Heart from './Images/Heart.svg';
 import Right from './Images/Right.svg';
 import Left from './Images/Left.svg';
@@ -159,9 +160,9 @@ const handlePrev = () => {
     <div>
       <header>
         <div className="gif-title">
-          <a href="./Gif.js">
-            <img className="svg" src={Home} alt="Home"/>
-          </a>
+        {/* <Router>
+          <Route path="/" exact component={Homepage} />
+        </Router> */}
           <h1 className="gif-title-h1">GYPHY</h1>
         </div>
         <div><strong>Search:</strong> {title}</div>
