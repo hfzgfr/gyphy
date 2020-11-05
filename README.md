@@ -14,10 +14,14 @@ What technologies you used that helped you build this project.
 ```
 Example:
 
+- HTML
+- CSS
+- JavaScript
 - React
 - Bootstrap with react
 - Ajax (axios) for API
-- etc..
+- React Router
+- Giphy APIs
 ```
 
 ### Wireframes
