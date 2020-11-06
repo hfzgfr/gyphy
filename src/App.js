@@ -23,6 +23,7 @@ function App() {
           <Route path='/random' component={Random} />
         </Switch>
       </Router>
+      {/* <h1 className="gif-title-h1">GYPHY</h1> */}
     {/* <Random /> */}
     </div>
   );

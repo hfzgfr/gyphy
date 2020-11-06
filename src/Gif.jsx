@@ -70,22 +70,9 @@ useEffect(() => {
 }, [offset])
 
 // HANDLE DOWNLOAD
-const handleDownload = (url) => {
-  let xhr = new XMLHttpRequest();
-  xhr.open('GET', url, true);
-  xhr.responseType = 'blob';
-  xhr.onload = function() {
-    let urlCreator = window.URL || window.webkitURL;
-    let imageUrl = urlCreator.createObjectURL(this.response);
-    let tag = document.createElement('a');
-    tag.href = imageUrl;
-    tag.download = title.charAt(0).toUpperCase() + title.slice(1);
-    document.body.appendChild(tag);
-    tag.click();
-    document.body.removeChild(tag);
-  }
-  xhr.send()
-}
+// const handleDownload = (url) => {
+  
+// }
 
 // RENDER CONTENT
 
@@ -113,11 +100,11 @@ const content = () => {
               Show
             </summary>
         <h5>{g.title !== undefined ? (g.title.charAt(0).toUpperCase() + g.title.slice(1)) : ''}</h5>
-        <button className="gif-download" onClick={() => handleDownload(g.images.fixed_height.url)}>
+        <button className="gif-download">
           <img className="svg" src={Download} alt="download" ></img>
         </button>
           </details>
-        <img className="image" onClick={() => handleDownload(g.images.fixed_height.url)} src={g.images.fixed_width.url} alt="gif" />
+        <img className="image" src={g.images.fixed_width.url} alt="gif" />
         </div>
       )
     });
