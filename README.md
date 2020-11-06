@@ -26,7 +26,7 @@ Example:
 
 ### Wireframes
 
-Your step by step planning sketch of your project, that you can post them as an image in here.
+<img width="1000" height="400" src="https://raw.githubusercontent.com/hfzgfr/gyphy/main/Screenshot%202020-11-05%20at%203.28.34%20PM.png">
 
 ### User Stories
 
@@ -35,8 +35,9 @@ Your step by step planning sketch of your project, that you can post them as an 
 User must be able to:
 
 - View animated GIFs on main page
-- Users should able to share those GIFs
 - Search Example
+- Random Page
+- Users should able to download those GIFs
 
 ```
 
