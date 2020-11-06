@@ -70,9 +70,22 @@ useEffect(() => {
 }, [offset])
 
 // HANDLE DOWNLOAD
-// const handleDownload = (url) => {
-  
-// }
+const handleDownload = (url) => {
+  let xhr = new XMLHttpRequest();
+  xhr.open('GET', url, true);
+  xhr.responseType = 'blob';
+  xhr.onload = function() {
+    let urlCreator = window.URL || window.webkitURL;
+    let imageUrl = urlCreator.createObjectURL(this.response);
+    let tag = document.createElement('a');
+    tag.href = imageUrl;
+    tag.download = title.charAt(0).toUpperCase() + title.slice(1);
+    document.body.appendChild(tag);
+    tag.click();
+    document.body.removeChild(tag);
+  }
+  xhr.send()
+}
 
 // RENDER CONTENT
 
@@ -81,7 +94,6 @@ const content = () => {
     // IF LOADER IS TRUE, SHOW LOADING SPINNER
     case loader:
       return (
-      <>
     <Container className="col text-center" fluid="md">
     {/* <h1>Loading...</h1> */}
       <Spinner animation="border" variant="primary" />
@@ -89,7 +101,8 @@ const content = () => {
       <Spinner animation="border" variant="success" />
       <Spinner animation="border" variant="danger" />
     </Container>
-    </>)
+      )
+    
     // IF DATA ARRAY IS LOADED, LOOP THROUGH
     case data.length > 0:
     return data.map(g => {
@@ -100,11 +113,11 @@ const content = () => {
               Show
             </summary>
         <h5>{g.title !== undefined ? (g.title.charAt(0).toUpperCase() + g.title.slice(1)) : ''}</h5>
-        <button className="gif-download">
+        <button className="gif-download" onClick={() => handleDownload(g.images.fixed_height.url)}>
           <img className="svg" src={Download} alt="download" ></img>
         </button>
           </details>
-        <img className="image" src={g.images.fixed_width.url} alt="gif" />
+        <img className="image" onClick={() => handleDownload(g.images.fixed_height.url)} src={g.images.fixed_width.url} alt="gif" />
         </div>
       )
     });
