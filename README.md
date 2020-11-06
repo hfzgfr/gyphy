@@ -26,7 +26,7 @@ Example:
 
 ### Wireframes
 
-<img width="1000" height="800" src="https://raw.githubusercontent.com/hfzgfr/gyphy/main/Screenshot%202020-11-05%20at%203.28.34%20PM.png">
+<img width="1000" height="600" src="https://raw.githubusercontent.com/hfzgfr/gyphy/main/Screenshot%202020-11-05%20at%203.28.34%20PM.png">
 
 ### User Stories
 
